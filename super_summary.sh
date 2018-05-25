@@ -3,7 +3,7 @@
 if [ ! $# -eq 2 ]; then
   echo "USAGE:"
   echo "$0 ./test-folder <op>"
-  echo "op = [r, w]"
+  echo "op = [r, w, s]"
   exit 1
 fi
 
@@ -12,9 +12,15 @@ test=$1
 if [[ $2 == 'w' ]]; then
   w=1
   r=2
+  srv=3
 elif [[ $2 == 'r' ]]; then
   w=2
   r=1
+  srv=3
+else
+  w=3
+  r=2
+  srv=1
 fi
 
 tmp=$(mktemp --directory --tmpdir summary.XXX)
@@ -43,6 +49,12 @@ for s in $test/**/reader_summary.txt; do
   printf "$line" >> $tmp/$r
 done
 
+if [[ $srv == 1 ]]; then
+  for s in $test/*; do
+    number=$(echo $s | sed 's/.*step//g')
+    printf "$number\n" >> $tmp/$srv
+  done
+fi
 
-paste $tmp/1 $tmp/2 > $file
+paste $tmp/1 $tmp/2 $tmp/3 > $file
 sort -n $file -o $file
