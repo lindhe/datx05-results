@@ -24,7 +24,7 @@ else
 fi
 
 tmp=$(mktemp --directory --tmpdir summary.XXX)
-base=$(echo $test | cut -d '_' -f 1)
+base=$(echo $test | sed 's/\(.*\)_[0-9][0-9][0-9][0-9].*/\1/g')
 file=$base"_summary.csv"
 
 for s in $test/**/writer_summary.txt; do
@@ -49,12 +49,10 @@ for s in $test/**/reader_summary.txt; do
   printf "$line" >> $tmp/$r
 done
 
-if [[ $srv == 1 ]]; then
-  for s in $test/*; do
-    number=$(echo $s | sed 's/.*step//g')
-    printf "$number\n" >> $tmp/$srv
-  done
-fi
+for s in $test/*; do
+  number=$(echo $s | sed 's/.*step//g')
+  printf "$number\n" >> $tmp/$srv
+done
 
 paste $tmp/1 $tmp/2 $tmp/3 > $file
 sort -n $file -o $file
