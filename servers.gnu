@@ -29,8 +29,8 @@ set style arrow 1 nohead filled ls 2 lc rgb 'black'
 set arrow from 17.5, graph 0 to 17.5, graph 1 as 1
 
 plot 'test-servers_summary.csv'\
-using 1:3 with linespoints lt 2 title "CASSS Read Latency",\
-'' u 1:2 w linesp lt 1 tit "CASSS Write Latency",\
+using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
+'' u 1:3 w linesp lt 1 tit "CASSS Write Latency",\
 'test-servers_ar_summary.csv'\
-using 1:3 with linespoints lt 3 title "AR Read Latency",\
-'' u 1:2 w linesp lt 4 tit "AR Write Latency",\
+using 1:2 with linespoints lt 3 title "AR Read Latency",\
+'' u 1:3 w linesp lt 4 tit "AR Write Latency",\
