@@ -8,7 +8,7 @@ set title 'Operation Latency: Increasing Number of Readers, 10 Writers'
 set title font ",22"
 
 #################################     AXIS     #################################
-set yrange [0:1.5]
+set yrange [0:4]
 set key left top font ",20"
 set ylabel 'Avg. operation latency [s]' font ",18"
 set xlabel 'Number of Readers' font ",18"
@@ -27,4 +27,6 @@ set for [i=1:4] linetype i dt i ps 2.5 pt 7 lw 4
 plot 'test-readers_summary.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 tit "CASSS Write Latency",\
-
+'test-readers_ar_summary.csv'\
+using 1:2 with linespoints lt 3 title "AR Read Latency",\
+'' u 1:3 w linesp lt 4 tit "AR Write Latency",\
