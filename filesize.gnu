@@ -8,8 +8,8 @@ set title 'Operation Latency: Increasing File Size, 1 Writer'
 set title font ",22"
 
 #################################     AXIS     #################################
-set logscale x 2
-#set logscale y 2
+# set logscale x 2
+# set logscale y 2
 #set yrange [0:4]
 set key left top font ",20"
 set ylabel 'Avg. operation latency [s]' font ",18"
@@ -30,5 +30,5 @@ plot 'test-filesize_summary.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
 'test-filesize_ar_summary.csv'\
-using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
-'' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
+using 1:2 with linespoints lt 3 title "AR Read Latency",\
+'' u 1:3 w linesp lt 4 title "AR Write Latency",\
