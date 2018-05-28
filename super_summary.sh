@@ -29,7 +29,7 @@ file=$base"_summary.csv"
 
 for s in $test/**/writer_summary.txt; do
   number=$(cat $s | grep "Average from" | cut -d ' ' -f 3)
-  op_latency=$(cat $s | grep "All:" | cut -d ' ' -f 2)
+  op_latency=$(cat $s | grep "Removed 2 outliers:" | cut -d ' ' -f 4)
   if [[ $w == 1 ]]; then
     line="$number $op_latency\n"
   else
@@ -40,7 +40,7 @@ done
 
 for s in $test/**/reader_summary.txt; do
   number=$(cat $s | grep "Average from" | cut -d ' ' -f 3)
-  op_latency=$(cat $s | grep "All:" | cut -d ' ' -f 2)
+  op_latency=$(cat $s | grep "Removed 2 outliers:" | cut -d ' ' -f 4)
   if [[ $r == 1 ]]; then
     line="$number $op_latency\n"
   else
