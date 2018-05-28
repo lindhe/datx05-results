@@ -30,5 +30,5 @@ plot 'test-filesize_summary.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
 'test-filesize_ar_summary.csv'\
-using 1:2 with linespoints lt 3 title "AR Read Latency",\
-'' u 1:3 w linesp lt 4 title "AR Write Latency",\
+using 1:2 with linespoints lt 3 title "MWMR ABD Read Latency",\
+'' u 1:3 w linesp lt 4 title "MWMR ABD Write Latency",\

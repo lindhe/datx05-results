@@ -28,5 +28,5 @@ plot 'test-writers_summary.csv'\
 using 1:3 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:2 w linesp lt 1 tit "CASSS Write Latency",\
 'test-writers_ar_summary.csv'\
-using 1:3 with linespoints lt 3 title "AR Read Latency",\
-'' u 1:2 w linesp lt 4 tit "AR Write Latency",\
+using 1:3 with linespoints lt 3 title "MWMR ABD Read Latency",\
+'' u 1:2 w linesp lt 4 tit "MWMR ABD Write Latency",\
