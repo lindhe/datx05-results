@@ -1,7 +1,7 @@
 #!/bin/env gnuplot
 ###############################     TERMINAL     ###############################
 set terminal pngcairo dashed size 1280,720
-set output './number_of_writers_ar.png'
+set output './png/number_of_writers_ar.png'
 
 ################################     TITLE     ################################
 set title 'Operation Latency: Increasing Number of Writers, 10 Readers'
