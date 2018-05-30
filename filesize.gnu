@@ -8,7 +8,7 @@ set title 'Operation Latency: Increasing File Size, 1 Writer'
 set title font ",22"
 
 #################################     AXIS     #################################
-# set logscale x 2
+set logscale x 2
 # set logscale y 2
 #set yrange [0:4]
 set key left top font ",20"
