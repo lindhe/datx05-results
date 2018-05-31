@@ -14,6 +14,7 @@ set title font ",22"
 set key left top font ",20"
 set ylabel 'Reset Time [s]' font ",18"
 set xlabel 'Number of Servers' font ",18"
+set xti 5,5
 set xti font ",18"
 set yti font ",18"
 set grid
