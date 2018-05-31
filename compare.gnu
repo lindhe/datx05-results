@@ -35,4 +35,13 @@ using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
 'test-compare_cas_zmq.csv'\
 using 1:2 with linespoints lt 3 title "CAS ZMQ Read Latency",\
-'' u 1:3 w linesp lt 4 title "CAS ZMQ Write Latency",\
+'' u 1:3 w linesp lt 4 title "CAS ZMQ Write Latency"
+
+#######################     NON-Self-Stabilizing CAS     #######################
+set output './png/comparion_with_cas.png'
+plot 'test-compare_casss.csv'\
+using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
+'' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
+'test-compare_cas.csv'\
+using 1:2 with linespoints lt 3 title "CAS Read Latency",\
+'' u 1:3 w linesp lt 4 title "CAS Write Latency",\
