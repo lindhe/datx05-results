@@ -10,8 +10,8 @@ set title font ",22"
 #################################     AXIS     #################################
 # set logscale x 2
 # set logscale y 2
-set yrange [0:]
-set key center top font ",20"
+set yrange [0:1]
+set key left top font ",20"
 set ylabel 'Avg. operation latency [s]' font ",18"
 set xlabel 'Number of Servers' font ",18"
 set xti 5,5
