@@ -30,7 +30,7 @@ set style arrow 1 nohead filled ls 2 lc rgb 'black'
 #################################     PLOT     #################################
 set arrow from 17.5, graph 0 to 17.5, graph 1 as 1
 
-plot 'test-compare_cas.csv'\
+plot 'test-compare_casss.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
 'test-compare_cas_zmq.csv'\
