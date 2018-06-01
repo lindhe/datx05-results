@@ -1,7 +1,7 @@
 #!/bin/env gnuplot
 ###############################     TERMINAL     ###############################
 set terminal pngcairo dashed size 1280,720
-set output './png/comparion_with_zmq.png'
+set output './png/comparison_with_zmq.png'
 
 ################################     TITLE     ################################
 set title 'Overhead Test 2: Increasing Number of Servers, 1 Client'
@@ -40,7 +40,7 @@ using 1:2 with linespoints lt 3 title "CAS ZMQ Read Latency",\
 
 #######################     NON-Self-Stabilizing CAS     #######################
 set title 'Overhead Test 1: Increasing Number of Servers, 1 Client'
-set output './png/comparion_with_cas.png'
+set output './png/comparison_with_cas.png'
 plot 'test-compare_casss.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
