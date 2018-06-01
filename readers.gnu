@@ -4,7 +4,7 @@ set terminal pngcairo dashed size 1280,720
 set output './png/number_of_readers.png'
 
 ################################     TITLE     ################################
-set title 'Operation Latency: Increasing Number of Readers, 10 Writers'
+set title 'Client Scalability Test: Increasing Number of Readers, 10 Writers'
 set title font ",22"
 
 #################################     AXIS     #################################

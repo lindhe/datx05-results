@@ -4,11 +4,11 @@ set terminal pngcairo dashed size 1280,720
 set output './png/number_of_servers.png'
 
 ################################     TITLE     ################################
-set title 'Operation Latency: Increasing Number of Servers, 10 Readers and 10 Writers'
+set title 'Server Scalability Test: Increasing Number of Servers, 10 Readers and 10 Writers'
 set title font ",22"
 
 #################################     AXIS     #################################
-set yrange [0:4]
+set yrange [0:5]
 set key left top font ",20"
 set ylabel 'Avg. operation latency [s]' font ",18"
 set xlabel 'Number of Servers' font ",18"
