@@ -27,7 +27,7 @@ set for [i=1:4] linetype i dt i ps 2.5 pt 7 lw 4
 
 #################################     PLOT     #################################
 set multiplot
-set object 1 rect from 3,6 to 128,20 lw 5
+set object 1 rect from 3,6 to 256,20 lw 5
 set object 1 rect fc rgb 'white' fillstyle solid 0.0 noborder
 
 plot 'test-filesize_summary.csv'\
@@ -39,9 +39,9 @@ using 1:2 with linespoints lt 3 title "MWMR ABD Read Latency",\
 
 ###############################     ZOOM BOX     ###############################
 set origin 0.1,0.2
-set size 0.5,0.45
-set xrange [1:512]
-set yrange [0:1.5]
+set size 0.6,0.45
+set xrange [1:4096]
+set yrange [0:3.5]
 unset key
 unset xlabel
 unset ylabel
