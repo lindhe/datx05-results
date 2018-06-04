@@ -26,9 +26,30 @@ set linetype 4 lc rgb '#109618' # green
 set for [i=1:4] linetype i dt i ps 2.5 pt 7 lw 4
 
 #################################     PLOT     #################################
+set multiplot
+set object 1 rect from 3,6 to 128,20 lw 5
+set object 1 rect fc rgb 'white' fillstyle solid 0.0 noborder
+
 plot 'test-filesize_summary.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\
 '' u 1:3 w linesp lt 1 title "CASSS Write Latency",\
 'test-filesize_ar_summary.csv'\
 using 1:2 with linespoints lt 3 title "MWMR ABD Read Latency",\
 '' u 1:3 w linesp lt 4 title "MWMR ABD Write Latency",\
+
+###############################     ZOOM BOX     ###############################
+set origin 0.1,0.2
+set size 0.5,0.45
+set xrange [1:512]
+set yrange [0:1.5]
+unset key
+unset xlabel
+unset ylabel
+unset title
+
+plot 'test-filesize_summary.csv'\
+using 1:2 with linespoints lt 2,\
+'' u 1:3 w linesp lt 1,\
+'test-filesize_ar_summary.csv'\
+using 1:2 with linespoints lt 3,\
+'' u 1:3 w linesp lt 4
