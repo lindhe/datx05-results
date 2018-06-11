@@ -4,7 +4,7 @@ set terminal pngcairo dashed size 1280,720
 set output './png/number_of_servers.png'
 
 ################################     TITLE     ################################
-set title 'Server Scalability Test: Increasing Number of Servers, 10 Readers and 10 Writers'
+set title 'Server Scalability: Increasing Number of Servers, 10 Readers and 10 Writers'
 set title font ",22"
 
 #################################     AXIS     #################################

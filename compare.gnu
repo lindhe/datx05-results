@@ -4,7 +4,7 @@ set terminal pngcairo dashed size 1280,720
 set output './png/comparison_with_zmq.png'
 
 ################################     TITLE     ################################
-set title 'Overhead Test 2: Increasing Number of Servers, 1 Client'
+set title 'Overhead Experiment 2: Increasing Number of Servers, 1 Client'
 set title font ",22"
 
 #################################     AXIS     #################################
@@ -39,7 +39,7 @@ using 1:2 with linespoints lt 3 title "CAS ZMQ Read Latency",\
 '' u 1:3 w linesp lt 4 title "CAS ZMQ Write Latency"
 
 #######################     NON-Self-Stabilizing CAS     #######################
-set title 'Overhead Test 1: Increasing Number of Servers, 1 Client'
+set title 'Overhead Experiment 1: Increasing Number of Servers, 1 Client'
 set output './png/comparison_with_cas.png'
 plot 'test-compare_casss.csv'\
 using 1:2 with linespoints lt 2 title "CASSS Read Latency",\

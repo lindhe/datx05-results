@@ -4,7 +4,7 @@ set terminal pngcairo dashed size 1280,720
 set output './png/reset.png'
 
 ################################     TITLE     ################################
-set title 'Global Reset Test: Increasing Number of Servers'
+set title 'Global Reset: Increasing Number of Servers'
 set title font ",22"
 
 #################################     AXIS     #################################

@@ -4,7 +4,7 @@ set terminal pngcairo dashed size 1280,720
 set output './png/filesize.png'
 
 ################################     TITLE     ################################
-set title 'File Size Test: Increasing File Size, 1 Writer'
+set title 'Data Object Scalability: Increasing Size, 1 Writer'
 set title font ",22"
 
 #################################     AXIS     #################################
@@ -13,7 +13,7 @@ set logscale x 2
 set yrange [0:]
 set key left top font ",20"
 set ylabel 'Avg. operation latency [s]' font ",18"
-set xlabel 'File Size [KiB]' font ",18"
+set xlabel 'Data Object Size [KiB]' font ",18"
 set xti font ",18"
 set yti font ",18"
 set grid
